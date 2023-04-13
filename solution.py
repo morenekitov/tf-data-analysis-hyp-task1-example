@@ -20,4 +20,4 @@ def solution(x_success: int,
     P = (y_success+x_success)/ (x_cnt + y_cnt)
     z =(loc_suc_x-loc_suc_y) / np.sqrt(   P*(1-P) * (1/x_cnt + 1/y_cnt))
     threshold = st.norm.ppf(1-a_val, loc=0, scale=1) 
-    return (1 if z > threshold else 0)
+    return (z > threshold)
